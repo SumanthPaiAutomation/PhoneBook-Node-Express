@@ -73,8 +73,8 @@ exports.createUser = async (req, res, next) => {
         const userId = req.params.id;
         const data = req.body;
         const userdata = Object.assign(userId,data);
-        db.User.insertOne(userdata).skip((page-1)*pagination).limit(pagination).populate('users');; 
-      return res.status(200).json(userdata);
+        const users = await db.User.insertOne(userdata).skip((page-1)*pagination).limit(pagination).populate('users');; 
+      return res.status(200).json(users);
     }
     
     catch (err) {
