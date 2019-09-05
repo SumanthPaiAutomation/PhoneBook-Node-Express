@@ -10,6 +10,7 @@ exports.register = async (req, res, next) => {
     return res.status(201).json({
       id,
       username,
+      email,
       token,
     });
   } catch (err) {
