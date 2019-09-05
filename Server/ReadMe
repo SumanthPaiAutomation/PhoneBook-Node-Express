@@ -1,0 +1,4 @@
+PhoneBook task with Node-Express,
+Mongoose-MongoDB as DB,
+Bcrypt,JWT as authentication.
+node_modules is skipped to be uploded here on GIT.
